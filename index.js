@@ -1,6 +1,9 @@
 import express from "express";
 import * as path from "path";
 import "dotenv/config";
+import winterRouter from "./routers/winterRouter.js"
+import summerRouter from "./routers/summerRouter.js"
+import autumnRouter from "./routers/autumnRouter.js"
 
 const app = express();
 const port = process.env.PORT;
@@ -15,4 +18,8 @@ app.get("/", (req, res) => {
     )
 })
 
+
+app.use("/winter", winterRouter)
+app.use("/summer", summerRouter)
+app.use("/autumn", autumnRouter)
 app.listen(port, () => console.log(`Listening to port ${port}`))
