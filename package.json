@@ -1,0 +1,23 @@
+{
+  "name": "nordicadventures-ejs",
+  "version": "1.0.0",
+  "description": "A webpage to display activities during sweden seasons",
+  "keywords": [
+    "seasons"
+  ],
+  "homepage": "https://github.com/SallyResch/nordicadventures-ejs#readme",
+  "bugs": {
+    "url": "https://github.com/SallyResch/nordicadventures-ejs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SallyResch/nordicadventures-ejs.git"
+  },
+  "license": "ISC",
+  "author": "Sally Resch and Sevilay Guns",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
