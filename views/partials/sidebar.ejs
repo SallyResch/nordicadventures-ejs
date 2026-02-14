@@ -1,15 +1,12 @@
 <div class="sidebar">
     <% if (pageName === "home") { %>
         <h4>All activities</h4>
-     <% dataListSummer.forEach(activity => { %>
-      <p class="sidebar_p"><%= activity.name %></p>
-     <% }) %>
-          <% dataListAutumn.forEach(activity => { %>
-      <p class="sidebar_p"><%= activity.name %></p>
-     <% }) %>
-          <% dataListWinter.forEach(activity => { %>
-      <p class="sidebar_p"><%= activity.name %></p>
-     <% }) %>
+        <% dataLists.forEach(list => { %>
+        <% list.forEach(activity => { %>
+            <p class="sidebar_p"><%= activity.name %></p>
+        <% }) %>
+    <% }) %>
+
     <% } %>
 
     <% if (pageName === "summer") { %>

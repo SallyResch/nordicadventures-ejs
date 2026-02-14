@@ -19,9 +19,9 @@ app.get("/", (req, res) => {
     pageName: "home",
     pageTitle: "Welcome to Nordic Adventures",
     pageSubtitle: "You can experience many exciting activities in Sweden.",
-    dataListSummer: summer,
-    dataListWinter: winter,
-    dataListAutumn: autumn,
+    dataLists: [
+      summer, winter, autumn
+    ]
   })
 });
 
