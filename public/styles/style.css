@@ -3,3 +3,13 @@
     margin: 0;
     padding: 0;
 }
+
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+}
