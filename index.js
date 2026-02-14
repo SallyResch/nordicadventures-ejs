@@ -16,6 +16,7 @@ app.get("/", (req, res) => {
   res.render(
     path.join(__dirname, "/views/pages/index"), {
     documentTitle: "Home Page",
+    pageName: "home",
     pageTitle: "Welcome to Nordic Adventures",
     pageSubtitle: "You can experience many exciting activities in Sweden.",
     dataListSummer: summer,
