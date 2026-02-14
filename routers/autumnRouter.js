@@ -11,9 +11,8 @@ autumnRouter.get("/", (req, res) => {
     pageName: "autumn",
     pageTitle: "Autumn",
     pageSubtitle: "Enjoy the autumn colors!",
-    dataList: autumn
+    dataList: autumn,
   });
 });
-
 
 export default autumnRouter;
