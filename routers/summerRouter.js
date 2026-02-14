@@ -11,7 +11,7 @@ summerRouter.get("/", (req, res) => {
     pageName: "summer",
     pageTitle: "Summer",
     pageSubtitle: "Feel the warmth of summer!",
-    dataListSummer: summer
+    dataList: summer
   });
 });
 

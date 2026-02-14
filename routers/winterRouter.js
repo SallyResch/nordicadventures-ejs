@@ -11,7 +11,7 @@ winterRouter.get("/", (req, res) => {
     pageName: "winter",
     pageTitle: "Winter",
     pageSubtitle: "Experience the magic of winter!",
-    dataListWinter: winter
+    dataList: winter
   });
 });
 
