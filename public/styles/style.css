@@ -181,12 +181,17 @@ body {
     transition: transform 0.3s;
 }
 
+.footer__div_link a {
+    text-decoration: none;
+}
+
 .footer__div_link img:hover {
     transform: scale(1.1);
 }
 
 .footer p {
-    font-size: 0.9rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
     color: #301212;
     text-align: center;
     margin-top: 10px;
