@@ -1,3 +1,22 @@
+:root {
+    --text-main: #413e3e;
+    --text-title: #ffffff;
+    --text-subtitle: #dbd8e8;
+    --text-footer: #301212;
+
+
+    /* Background colors */
+    --bg-body: rgb(247, 249, 253);
+    --bg-sidebar: #fbfbfb;
+    --bg-header: #f3f3eb;
+    --bg-section: hsla(220, 100%, 98%, 0.5);
+    --bg-footer: #c4d2e9;
+    --bg-nav-item: rgb(255, 255, 255);
+    --bg-nav-hover: #8b9ebd;
+    --bg-nav-active: #2852c6;
+    --bg-sidebar-hover: rgb(214, 231, 249);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -95,9 +114,7 @@ body {
     padding: 5px 10px;
     transition:
         color 0.3s ease,
-        background-color 0.3s ease,
         transform 0.3s ease,
-        box-shadow 0.3s ease;
 }
 
 .nav_item:hover {
