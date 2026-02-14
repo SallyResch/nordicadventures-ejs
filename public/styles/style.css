@@ -8,6 +8,16 @@ html {
     height: 100vh;
 }
 
+body {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    height: 100vh;
+}
+
 
 .header {
     padding: 20px;

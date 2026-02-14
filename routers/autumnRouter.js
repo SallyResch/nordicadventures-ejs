@@ -1,18 +1,16 @@
-import express from "express"
-import * as path from "path"
-import { autumn } from '../data/data.js'
+import express from "express";
+import * as path from "path";
+import { autumn } from "../data/data.js";
 
 const autumnRouter = express.Router();
-const __dirname = path.resolve()
+const __dirname = path.resolve();
 
 autumnRouter.get("/", (req, res) => {
-    res.render(
-        path.join(__dirname, "/views/pages/seasonFeature"),
-        {
-         pageTitle: "Autumn",                
-         pageSubtitle: "Enjoy the autumn colors!", 
-        }
-    )
-})
+  res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
+    pageTitle: "Autumn",
+    pageSubtitle: "Enjoy the autumn colors!",
+    documentTitle: "Autumn",
+  });
+});
 
-export default autumnRouter
+export default autumnRouter;
