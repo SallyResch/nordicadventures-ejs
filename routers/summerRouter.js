@@ -8,8 +8,10 @@ const __dirname = path.resolve();
 summerRouter.get("/", (req, res) => {
   res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
     documentTitle: "Summer",
+    pageName: "summer",
     pageTitle: "Summer",
     pageSubtitle: "Feel the warmth of summer!",
+    dataList: summer
   });
 });
 

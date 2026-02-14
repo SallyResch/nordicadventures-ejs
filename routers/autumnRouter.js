@@ -10,7 +10,12 @@ autumnRouter.get("/", (req, res) => {
     pageTitle: "Autumn",
     pageSubtitle: "Enjoy the autumn colors!",
     documentTitle: "Autumn",
+    pageName: "autumn",
+    pageTitle: "Autumn",
+    pageSubtitle: "Enjoy the autumn colors!",
+    dataList: autumn
   });
 });
+
 
 export default autumnRouter;
