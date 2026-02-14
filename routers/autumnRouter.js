@@ -9,7 +9,8 @@ autumnRouter.get("/", (req, res) => {
     res.render(
         path.join(__dirname, "/views/pages/seasonFeature"),
         {
-
+         pageTitle: "Autumn",                
+         pageSubtitle: "Enjoy the autumn colors!", 
         }
     )
 })

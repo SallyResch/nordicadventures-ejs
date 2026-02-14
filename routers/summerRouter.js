@@ -1,17 +1,15 @@
-import express from "express"
-import * as path from "path"
-import { summer } from '../data/data.js'
+import express from "express";
+import * as path from "path";
+import { summer } from "../data/data.js";
 
 const summerRouter = express.Router();
-const __dirname = path.resolve()
+const __dirname = path.resolve();
 
 summerRouter.get("/", (req, res) => {
-    res.render(
-        path.join(__dirname, "/views/pages/seasonFeature"),
-        {
+  res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
+    pageTitle: "Summer",
+    pageSubtitle: "Feel the warmth of summer!",
+  });
+});
 
-        }
-    )
-})
-
-export default summerRouter
+export default summerRouter;
