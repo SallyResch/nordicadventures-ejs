@@ -5,7 +5,7 @@ export const summer = [
     description: "Swedish people like to dance around a pole made of plants, thats representing the birth of new things"
   },
   {
-    name: "Boat trips - Hop on/hop off",
+    name: "Boat trips",
     activity: "Sightseeing",
     description: "Taking boat trips, including hop-on hop-off tours, is a very common and popular way to enjoy sightseeing in Sweden during the summer."
   }

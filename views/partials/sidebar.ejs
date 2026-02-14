@@ -1,1 +1,32 @@
-<h1>summer</h1>
+<div class="sidebar">
+    <% if (pageName === "home") { %>
+        <h4>All activities</h4>
+        <% dataLists.forEach(list => { %>
+        <% list.forEach(activity => { %>
+            <p class="sidebar_p"><%= activity.name %></p>
+        <% }) %>
+    <% }) %>
+
+    <% } %>
+
+    <% if (pageName === "summer") { %>
+        <h4>Summer activities</h4>
+     <% dataList.forEach(activity => { %>
+      <p class="sidebar_p"><%= activity.name %></p>
+     <% }) %>
+     <% } %>
+
+    <% if (pageName === "autumn") { %>
+        <h4>Autumn activities</h4>
+          <% dataList.forEach(activity => { %>
+      <p class="sidebar_p"><%= activity.name %></p>
+     <% }) %>
+    <% } %>
+
+    <% if (pageName === "winter") { %>
+        <h4>Winter activities</h4>
+    <% dataList.forEach(activity => { %>
+      <p class="sidebar_p"><%= activity.name %></p>
+     <% }) %>
+    <% } %>
+</div>
