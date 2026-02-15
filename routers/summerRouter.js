@@ -1,6 +1,6 @@
 import express from "express";
 import * as path from "path";
-import { summer } from "../data/data.js";
+import { summer, homepageContent } from "../data/data.js";
 
 const summerRouter = express.Router();
 const __dirname = path.resolve();
@@ -11,6 +11,7 @@ summerRouter.get("/", (req, res) => {
     pageName: "summer",
     pageTitle: "Summer",
     pageSubtitle: "Feel the warmth of summer",
+    season: homepageContent,
     dataList: summer,
   });
 });
