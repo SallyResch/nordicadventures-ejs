@@ -25,7 +25,7 @@ summerRouter.get("/:name", (req, res) => {
     documentTitle: activity.name,
     pageName: "summer",
     pageTitle: activity.name,
-    pageSubtitle: activity.description,
+    pageSubtitle: "Seasonal Activity Details",
     dataList: summer,
     activity: activity,
   });
