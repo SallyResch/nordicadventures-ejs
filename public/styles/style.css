@@ -217,6 +217,7 @@ body {
     transform: scale(1.1);
 }
 
+
 .footer p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
@@ -246,6 +247,10 @@ body {
 
     }
 
+    .sectionAdventures h4 {
+        font-size: 1.5rem
+    }
+
     .sectionAdventures {
         margin: 20px 0;
         max-width: 100%;
@@ -267,7 +272,7 @@ body {
         position: absolute;
         top: 80px;
         right: 0;
-        background-color: hsl(0, 100%, 99%, 0.5);
+        background-color: hsla(0, 0%, 100%, 0.9);
         flex-direction: column;
         width: 200px;
         padding: 15px;
