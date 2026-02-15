@@ -10,8 +10,24 @@ summerRouter.get("/", (req, res) => {
     documentTitle: "Summer",
     pageName: "summer",
     pageTitle: "Summer",
-    pageSubtitle: "Feel the warmth of summer!",
-    dataList: summer
+    pageSubtitle: "Feel the warmth of summer",
+    dataList: summer,
+  });
+});
+summerRouter.get("/:name", (req, res) => {
+  const activity = summer.find(item => item.name.toLowerCase() === req.params.name.toLowerCase());
+
+  if (!activity) {
+    return res.status(404).send("Activity not found");
+  }
+
+  res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
+    documentTitle: activity.name,
+    pageName: "summer",
+    pageTitle: activity.name,
+    pageSubtitle: activity.description,
+    dataList: summer,
+    activity: activity,
   });
 });
 
