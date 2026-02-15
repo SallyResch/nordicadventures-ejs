@@ -1,0 +1,15 @@
+<% if (locals.activity) { %>
+  <div class="main-container activity-details">
+    <h1 class="main-title"><%= activity.name %></h1>
+    <h3 class="main-description"><%= activity.description %></h3>
+
+    <% if (activity.image) { %>
+      <img src="<%= activity.image %>" alt="<%= activity.name %>" class="activity-image"/>
+    <% } %>
+  </div>
+<% } else { %>
+  <div class="main-container activity-details-home">
+    <h1 class="main-title"><%= pageTitle %></h1>
+    <h3 class="main-description"><%= pageSubtitle %></h3>
+  </div>
+<% } %>

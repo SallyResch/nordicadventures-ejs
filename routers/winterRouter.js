@@ -10,8 +10,24 @@ winterRouter.get("/", (req, res) => {
     documentTitle: "winter",
     pageName: "winter",
     pageTitle: "Winter",
-    pageSubtitle: "Experience the magic of winter!",
-    dataList: winter
+    pageSubtitle: "Experience the magic of winter",
+    dataList: winter,
+  });
+});
+winterRouter.get("/:name", (req, res) => {
+  const activity = winter.find(item => item.name.toLowerCase() === req.params.name.toLowerCase());
+
+  if (!activity) {
+    return res.status(404).send("Activity not found");
+  }
+
+  res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
+    documentTitle: activity.name,
+    pageName: "winter",
+    pageTitle: activity.name,
+    pageSubtitle: activity.description,
+    dataList: winter,
+    activity: activity,
   });
 });
 

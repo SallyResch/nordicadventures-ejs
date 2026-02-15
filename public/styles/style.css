@@ -42,6 +42,7 @@ body {
 }
 
 .sidebar {
+    max-width: 220px;
     background-color: #fbfbfb;
     box-shadow: 0 1px 5px rgba(0, 0.1, 0, 0.2);
     border-radius: 5px;
@@ -62,6 +63,7 @@ body {
 }
 
 .header {
+    width: 100%;
     padding: 20px;
     background-color: #f3f3eb;
     background-image: url("/images/snowSweden.jpg");
@@ -72,10 +74,11 @@ body {
 }
 
 .headertitle {
-    color: #ffffff;
     text-align: center;
     font-size: 2rem;
     margin: 0 0 5px 0;
+    color: hsla(0, 0%, 100%);
+    background-color: hsl(0, 56%, 2%, 0.5);
 
 }
 
@@ -83,7 +86,8 @@ body {
     text-align: center;
     font-size: 1rem;
     margin: 0 0 15px 0;
-    color: #dbd8e8;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 56%, 2%, 0.5);
 }
 
 .nav {
@@ -142,34 +146,40 @@ body {
 }
 
 
-.sectionAdventures {
+.sectionAdventures,
+.activity-details,
+.activity-details-home {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
     font-size: 1rem;
+    width: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     max-width: 800px;
     margin: 40px auto;
     line-height: 1.6;
-    color: #413e3e;
+    color: var(--text-main);
     padding: 0 20px;
-    background-color: hsla(220, 100%, 98%, 0.5);
+    color: var(--text-main);
 
 }
 
 .sectionAdventures h4 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     color: #0c225e;
 }
 
+.activity-image {
+    height: auto;
+    width: 50%;
+}
 
 .footer {
-    background-color: #c4d2e9;
+    background-color: var(--bg-footer);
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 10px;
@@ -188,12 +198,14 @@ body {
 }
 
 .logo_image {
+    display: flex;
     width: 80px;
     height: auto;
+    gap: 20px;
 }
 
 .footer__div_link img {
-    width: 50px;
+    width: 40px;
     height: auto;
     margin: 0 10px;
     transition: transform 0.3s;
@@ -207,10 +219,11 @@ body {
     transform: scale(1.1);
 }
 
+
 .footer p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
-    color: #301212;
+    color: var(--text-footer);
     text-align: center;
     margin-top: 10px;
 }
@@ -227,6 +240,24 @@ body {
 
 @media (max-width: 768px) {
 
+    .sectionAdventures,
+    .activity-details,
+    .activity-details-home {
+
+        font-size: 0.75rem;
+        flex-shrink: 1;
+
+    }
+
+    .sectionAdventures h4 {
+        font-size: 1.5rem
+    }
+
+    .sectionAdventures {
+        margin: 20px 0;
+        max-width: 100%;
+    }
+
     .nav_toggle {
         display: block;
     }
@@ -241,9 +272,9 @@ body {
 
     .nav_links {
         position: absolute;
-        top: 60px;
+        top: 80px;
         right: 0;
-        background-color: #fff8f8;
+        background-color: hsla(0, 0%, 100%, 0.9);
         flex-direction: column;
         width: 200px;
         padding: 15px;
@@ -271,7 +302,7 @@ body {
 
     .footer__div_link img {
         width: 40px;
-        margin: 5px;
+        margin: 3px;
     }
 
     .logo_image {
