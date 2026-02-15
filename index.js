@@ -25,4 +25,26 @@ app.get("/", (req, res) => {
 app.use("/winter", winterRouter);
 app.use("/summer", summerRouter);
 app.use("/autumn", autumnRouter);
+
+app.get("/:name", (req, res) => {
+  const allActivities = [...summer, ...winter, ...autumn];
+
+  const activity = allActivities.find(
+    item => item.name.toLowerCase() === req.params.name.toLowerCase()
+  );
+
+  if (!activity) {
+    return res.status(404).send("Activity not found");
+  }
+  res.render(path.join(__dirname, "/views/pages/index"), {
+    documentTitle: activity.name,
+    pageName: "home",
+    pageTitle: activity.name,
+    pageSubtitle: activity.description,
+    dataLists: [summer, winter, autumn],
+    activity
+  });
+});
+
+
 app.listen(port, () => console.log(`Listening to port ${port}`));
