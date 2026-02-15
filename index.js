@@ -13,9 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-
-  res.render(
-    path.join(__dirname, "/views/pages/index"), {
+  res.render(path.join(__dirname, "/views/pages/index"), {
     documentTitle: "Home Page",
     pageName: "home",
     pageTitle: "Welcome to Nordic Adventures",
@@ -31,9 +29,7 @@ app.use("/autumn", autumnRouter);
 app.get("/:name", (req, res) => {
   const allActivities = [...summer, ...winter, ...autumn];
 
-  const activity = allActivities.find(
-    item => item.name.toLowerCase() === req.params.name.toLowerCase()
-  );
+  const activity = allActivities.find(item => item.name.toLowerCase() === req.params.name.toLowerCase());
 
   if (!activity) {
     return res.status(404).send("Activity not found");
@@ -44,9 +40,8 @@ app.get("/:name", (req, res) => {
     pageTitle: activity.name,
     pageSubtitle: activity.description,
     dataLists: [summer, winter, autumn],
-    activity
+    activity,
   });
 });
-
 
 app.listen(port, () => console.log(`Listening to port ${port}`));
