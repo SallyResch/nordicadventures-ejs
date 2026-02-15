@@ -4,7 +4,9 @@
         <h4>All activities</h4>
         <% dataLists.forEach(list => { %>
         <% list.forEach(activity => { %>
+          <a href="/<%= activity.name %>">
             <p class="sidebar_p"><%= activity.name %></p>
+          </a>
         <% }) %>
     <% }) %>
 
