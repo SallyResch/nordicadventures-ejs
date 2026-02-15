@@ -24,7 +24,7 @@ export const autumn = [
     name: "Museeum",
     activity: "Walk around in museeum.",
     description: "Explore swedish museeum",
-    image: "/images/museumSweden.jpg",
+    image: "/images/museumsSweden.jpg",
   },
 ];
 
@@ -33,18 +33,18 @@ export const winter = [
     name: "Snow Adventure",
     activity: "Skiing",
     description: "Hit the snowy slopes and enjoy thrilling winter sports in the crisp mountain air.",
-    image: "/images/summerSweden.jpg",
+    image: "/images/nature1.jpg",
   },
   {
     name: "Cozy Nights",
     activity: "Hot chocolate by the fireplace",
     description: "Stay warm indoors with blankets, warm drinks, and relaxing evenings during chilly winter days.",
-    image: "/images/summerSweden.jpg",
+    image: "/images/snowSweden.jpg",
   },
   {
     name: "Cozy Christmas",
     activity: "Gather family in Sweden",
     description: "Stay warm indoors with blankets, warm drinks, and relaxing evenings during chilly winter days.",
-    image: "/images/summerSweden.jpg",
+    image: "/images/nature1.jpg",
   },
 ];
