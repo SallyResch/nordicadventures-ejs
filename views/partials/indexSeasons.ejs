@@ -1,0 +1,25 @@
+<% if (locals.season && !locals.activity) { %>
+    
+    <% if (pageName === 'summer') { %>
+        <section class="seasons-featurehome">
+            <h1><%= season[0].title %></h1>
+            <p><%= season[0].description %></p>
+            <img src="<%= season[0].image %>" alt="Winter Home">
+        </section>
+
+    <% } else if (pageName === 'autumn') { %>
+        <section class="seasons-featurehome">
+            <h1><%= season[1].title %></h1>
+            <p><%= season[1].description %></p>
+            <img src="<%= season[1].image %>" alt="Summer Home">
+        </section>
+
+    <% } else if (pageName === 'winter') { %>
+        <section class="seasons-featurehome">
+            <h1><%= season[2].title %></h1>
+            <p><%= season[2].description %></p>
+            <img src="<%= season[2].image %>" alt="Autumn Home">
+        </section>
+    <% } %>
+
+<% } %>

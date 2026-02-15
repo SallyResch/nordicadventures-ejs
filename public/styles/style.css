@@ -177,6 +177,17 @@ body {
     width: 50%;
 }
 
+.activity-image {
+    height: auto;
+    width: 50%;
+}
+
+.seasons-featurehome img {
+    height: auto;
+    width: 50%;
+}
+
+
 .footer {
     background-color: var(--bg-footer);
     display: flex;
