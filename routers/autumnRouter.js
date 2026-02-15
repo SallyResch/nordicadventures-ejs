@@ -1,6 +1,6 @@
 import express from "express";
 import * as path from "path";
-import { autumn } from "../data/data.js";
+import { autumn, homepageContent } from "../data/data.js";
 
 const autumnRouter = express.Router();
 const __dirname = path.resolve();
@@ -11,6 +11,9 @@ autumnRouter.get("/", (req, res) => {
     pageSubtitle: "Enjoy the autumn colors",
     documentTitle: "Autumn",
     pageName: "autumn",
+    pageTitle: "Autumn",
+    pageSubtitle: "Enjoy the autumn colors!",
+    season: homepageContent,
     dataList: autumn,
   });
 });
@@ -25,7 +28,7 @@ autumnRouter.get("/:name", (req, res) => {
     documentTitle: activity.name,
     pageName: "autumn",
     pageTitle: activity.name,
-    pageSubtitle: activity.description,
+    pageSubtitle: "Seasonal Activity Details",
     dataList: autumn,
     activity: activity,
   });
