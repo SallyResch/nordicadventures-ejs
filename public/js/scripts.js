@@ -1,6 +1,8 @@
 const navToggle = document.querySelector(".nav_toggle");
 const navLinks = document.querySelector(".nav_links");
 const navItems = document.querySelectorAll(".nav_item");
+const sidebarIconMobile = document.querySelector(".sidebar_toggle")
+const sidebar = document.querySelector(".sidebar");
 
 navToggle.addEventListener("click", e => {
   navLinks.classList.toggle("active");
@@ -19,5 +21,16 @@ navItems.forEach(link => {
     link.classList.add("active-link");
   } else {
     link.classList.remove("active-link");
+  }
+});
+
+sidebarIconMobile.addEventListener("click", e => {
+  sidebar.classList.toggle("active");
+  e.stopPropagation();
+});
+
+document.addEventListener("click", e => {
+  if (!sidebar.contains(e.target) && !sidebarIconMobile.contains(e.target)) {
+    sidebar.classList.remove("active");
   }
 });
