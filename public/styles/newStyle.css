@@ -1,0 +1,283 @@
+/* =====================
+   BASE = MOBILE FIRST
+===================== */
+
+:root {
+  --text-main: #413e3e;
+  --text-title: #ffffff;
+  --text-subtitle: #dbd8e8;
+  --text-footer: #301212;
+  --bg-body: rgb(247, 249, 253);
+  --bg-sidebar: #fbfbfb;
+  --bg-header: #f3f3eb;
+  --bg-footer: #c4d2e9;
+  --bg-nav-hover: #8b9ebd;
+  --bg-nav-active: #2852c6;
+  --bg-nav-darkblue: #0f1d44;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-body);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* MAIN LAYOUT */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  /* MOBILE = column */
+  flex: 1;
+}
+
+/* HEADER */
+
+.header {
+  width: 100%;
+  padding: 20px;
+  background-image: url("/images/snowSweden.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--bg-header);
+  text-align: center;
+}
+
+.headertitle {
+  font-size: 1.5rem;
+}
+
+.headersubtitle {
+  font-size: 1rem;
+}
+
+.text-content {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav_toggle {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--bg-nav-darkblue);
+  background: none;
+  border: none;
+}
+
+.nav_links {
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  background: white;
+  flex-direction: column;
+  width: 200px;
+  padding: 15px;
+  gap: 10px;
+  display: none;
+  border-radius: 10px;
+}
+
+.nav_links.active {
+  display: flex;
+  border: 1px solid var(--bg-nav-darkblue);
+}
+
+.nav_item {
+  font-size: 1rem;
+  padding: 8px;
+  background: white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+/* CONTENT SECTIONS */
+
+.sectionAdventures,
+.activity-details,
+.activity-details-home {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* IMAGES = FULL WIDTH ON MOBILE */
+
+.activity-image,
+.seasons-featurehome img {
+  width: 100%;
+  height: auto;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--bg-sidebar);
+  padding: 15px;
+  display: none;
+  /* hidden on mobile by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.sidebar.active {
+  display: block;
+  transform: translateX(0);
+}
+
+.sidebar_toggle {
+  display: block;
+  /* visible on mobile */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Sidebar links */
+.sidebar_p {
+  padding: 10px;
+  margin-top: 5px;
+  color: #233044;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar_p:hover {
+  background-color: var(--bg-sidebar-hover);
+  box-shadow: 0 1px 10px rgba(31, 34, 255, 0.2);
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--bg-footer);
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Logo */
+
+.footer__div-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo_image {
+  width: 80px;
+  height: auto;
+}
+
+/* Social Links */
+
+.footer__div_link {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer__div_link a {
+  text-decoration: none;
+}
+
+.footer__div_link img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.footer__div_link img:hover {
+  transform: scale(1.1);
+}
+
+/* Copyright text */
+
+.footer p {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-footer);
+}
+
+/* =====================
+   TABLET AND UP
+===================== */
+
+@media (min-width: 768px) {
+
+  .main {
+    flex-direction: row;
+
+  }
+
+  .sidebar {
+    display: block;
+    position: static;
+    transform: translateX(0);
+    max-width: 220px;
+    flex-shrink: 0;
+    height: auto;
+    padding: 20px;
+  }
+
+  .sidebar_toggle {
+    display: none;
+    /* hide toggle button */
+  }
+
+  .nav_toggle {
+    display: none;
+  }
+
+  .nav_links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .nav_item {
+    font-size: 1.2rem;
+  }
+
+  .activity-image,
+  .seasons-featurehome img {
+    width: 50%;
+  }
+}
