@@ -66,6 +66,6 @@ export const homepageContent = [
     id: "winter",
     title: "The Magic of Winter",
     description: "Sweden in winter is a snowy paradise. From the breathtaking Northern Lights in the North to cozy, candle-lit cafes in the South, it's a season of stillness and beauty.",
-    image: "/images/autumnSweden.jpg",
+    image: "/images/snowSweden.jpg",
   },
 ];

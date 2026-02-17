@@ -4,7 +4,7 @@ import "dotenv/config";
 import winterRouter from "./routers/winterRouter.js";
 import summerRouter from "./routers/summerRouter.js";
 import autumnRouter from "./routers/autumnRouter.js";
-import { summer, autumn, winter } from "./data/data.js";
+import { summer, autumn, winter, homepageContent } from "./data/data.js";
 const app = express();
 const port = process.env.PORT;
 const __dirname = path.resolve();
@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
     pageName: "home",
     pageTitle: "Nordic Adventures",
     pageSubtitle: "Experience exciting activities in Sweden.",
+    season: homepageContent,
     dataLists: [summer, winter, autumn],
   });
 });

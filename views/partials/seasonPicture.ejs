@@ -1,0 +1,13 @@
+<div class="picture-div">
+    <% if (pageName === 'summer') { %>
+        <img class="season_partial_picture" src="<%= season[0].image %>" alt="Summer Home">
+    <% } else if (pageName === 'autumn') { %>
+        <img class="season_partial_picture" src="<%= season[1].image %>" alt="Autumn Home">
+    <% } else if (pageName === 'winter') { %>
+        <img class="season_partial_picture" src="<%= season[2].image %>" alt="Winter Home">
+    <% } else if (pageName === 'home') { %>
+        <img class="season_partial_pictures" src="<%= season[0].image %>" alt="Home" width="1024" height="1024">
+        <img class="season_partial_pictures" src="<%= season[1].image %>" alt="Home" width="1024" height="1024">
+        <img class="season_partial_pictures" src="<%= season[2].image %>" alt="Home" width="1024" height="1024">
+    <% } %>
+</div>

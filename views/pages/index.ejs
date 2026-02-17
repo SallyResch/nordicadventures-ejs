@@ -2,16 +2,16 @@
 <body>
     <%- include('../partials/header') %>
   <main class="main">
+    <%- include("../partials/seasonPicture") %>
+    <div>
     <% if (locals.dataLists) { %>
      <%- include('../partials/sidebar') %>
     <% } %>
-
-
     <section class="sectionAdventures">
       <% if (locals.activity) { %>
         <%- include('../partials/activityDetails') %>
       <% } else { %>
-      <h4>Nordic Adventures</h4>
+      <h2>Welcome</h2>
       <p>
         Discover the breathtaking beauty of Sweden with Nordic Adventures!
         From serene forests and crystal-clear lakes to snowy mountains and vibrant 
@@ -23,6 +23,7 @@
       </p>
       <% } %>
     </section>
+    </div>
   </main>
   <%- include('../partials/footer') %>
 </body>

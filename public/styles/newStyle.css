@@ -91,8 +91,26 @@ h1 {
 .main {
   display: flex;
   align-items: start;
+  flex-direction: column;
   flex-grow: 1;
   height: 100%;
+}
+
+.picture-div {
+  display: flex;
+}
+
+.season_partial_pictures {
+  flex: 1;
+  width: 33%;
+  height: auto;
+  object-fit: cover;
+}
+
+.season_partial_picture {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .sectionAdventures {

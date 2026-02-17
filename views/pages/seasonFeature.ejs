@@ -2,11 +2,14 @@
 <body>
     <%- include('../partials/header') %>
   <main class="main">
+    <%- include("../partials/seasonPicture") %>
     <% if (locals.dataList) { %>
          <%- include('../partials/sidebar') %>
     <% } %>
+    <section class="sectionAdventures">
       <%- include('../partials/indexSeasons') %>
       <%- include('../partials/activityDetails') %>
+      </section>
   </main>
   <%- include('../partials/footer') %>
 </body>
