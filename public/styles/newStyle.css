@@ -87,8 +87,16 @@ h1 {
 }
 
 .main {
+  display: flex;
+  align-items: start;
   flex-grow: 1;
   height: 100%;
+}
+
+.sectionAdventures {
+  text-align: center;
+  padding: 0 40px;
+  margin: 40px auto;
 }
 
 .linkedin_nav_image {
