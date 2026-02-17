@@ -66,8 +66,7 @@ h1 {
   position: fixed;
   top: 80px;
   left: -250px;
-  width: 250px;
-  height: 100vh;
+  width: 150px;
   background: white;
   transition: left 0.3s ease;
   z-index: 1000;
@@ -84,6 +83,9 @@ h1 {
   top: 80px;
   left: 0;
   border: 1px solid #1c398e;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .main {
