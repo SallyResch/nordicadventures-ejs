@@ -7,12 +7,10 @@ const __dirname = path.resolve();
 
 autumnRouter.get("/", (req, res) => {
   res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
-    pageTitle: "Autumn",
-    pageSubtitle: "Enjoy the autumn colors",
+    pageTitle: "Nordic Adventures",
+    pageSubtitle: "Experience exciting activities in Sweden.",
     documentTitle: "Autumn",
     pageName: "autumn",
-    pageTitle: "Autumn",
-    pageSubtitle: "Enjoy the autumn colors!",
     season: homepageContent,
     dataList: autumn,
   });
@@ -27,8 +25,8 @@ autumnRouter.get("/:name", (req, res) => {
   res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
     documentTitle: activity.name,
     pageName: "autumn",
-    pageTitle: activity.name,
-    pageSubtitle: "Seasonal Activity Details",
+    pageTitle: "Nordic Adventures",
+    pageSubtitle: "Experience exciting activities in Sweden.",
     dataList: autumn,
     activity: activity,
   });

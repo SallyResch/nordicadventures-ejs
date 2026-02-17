@@ -9,8 +9,8 @@ summerRouter.get("/", (req, res) => {
   res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
     documentTitle: "Summer",
     pageName: "summer",
-    pageTitle: "Summer",
-    pageSubtitle: "Feel the warmth of summer",
+    pageTitle: "Nordic Adventures",
+    pageSubtitle: "Experience exciting activities in Sweden.",
     season: homepageContent,
     dataList: summer,
   });
@@ -25,8 +25,8 @@ summerRouter.get("/:name", (req, res) => {
   res.render(path.join(__dirname, "/views/pages/seasonFeature"), {
     documentTitle: activity.name,
     pageName: "summer",
-    pageTitle: activity.name,
-    pageSubtitle: "Seasonal Activity Details",
+    pageTitle: "Nordic Adventures",
+    pageSubtitle: "Experience exciting activities in Sweden.",
     dataList: summer,
     activity: activity,
   });

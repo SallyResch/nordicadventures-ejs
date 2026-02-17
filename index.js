@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
   res.render(path.join(__dirname, "/views/pages/index"), {
     documentTitle: "Home Page",
     pageName: "home",
-    pageTitle: "Welcome to Nordic Adventures",
-    pageSubtitle: "You can experience many exciting activities in Sweden.",
+    pageTitle: "Nordic Adventures",
+    pageSubtitle: "Experience exciting activities in Sweden.",
     dataLists: [summer, winter, autumn],
   });
 });
